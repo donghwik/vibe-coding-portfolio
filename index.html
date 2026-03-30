@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Power Architecture &amp; System Architect</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Donghwi Kim</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-tag">Director of Power Architecture</p>
+      <h1 class="hero-title">
+        Architecting the <span class="gradient-text">Future</span> of
+        <span class="gradient-text">Mobile Power</span>
+      </h1>
+      <p class="hero-sub">
+        Designing power &amp; performance systems that shape how billions experience mobile computing.
+      </p>
+      <a href="#about" class="hero-cta">Explore My Work</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="circuit-art" id="circuitArt">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <!-- CPU Core -->
+              <rect x="140" y="140" width="120" height="120" rx="8" fill="none" stroke="url(#grad1)" stroke-width="2" filter="url(#glow)" class="svg-animate"/>
+              <rect x="165" y="165" width="70" height="70" rx="4" fill="none" stroke="url(#grad1)" stroke-width="1.5" opacity="0.6" class="svg-animate-delay"/>
+              <text x="200" y="205" text-anchor="middle" fill="url(#grad1)" font-size="14" font-family="Space Grotesk" font-weight="600">POWER</text>
+              <!-- Traces top -->
+              <line x1="160" y1="140" x2="160" y2="80" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="200" y1="140" x2="200" y2="60" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="240" y1="140" x2="240" y2="80" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <!-- Traces bottom -->
+              <line x1="160" y1="260" x2="160" y2="320" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="200" y1="260" x2="200" y2="340" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="240" y1="260" x2="240" y2="320" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <!-- Traces left -->
+              <line x1="140" y1="160" x2="80" y2="160" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="140" y1="200" x2="60" y2="200" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="140" y1="240" x2="80" y2="240" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <!-- Traces right -->
+              <line x1="260" y1="160" x2="320" y2="160" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="260" y1="200" x2="340" y2="200" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <line x1="260" y1="240" x2="320" y2="240" stroke="url(#grad1)" stroke-width="1.5" opacity="0.5" class="trace-animate"/>
+              <!-- Corner nodes -->
+              <circle cx="160" cy="80" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="200" cy="60" r="4" fill="#06b6d4" class="node-pulse"/>
+              <circle cx="240" cy="80" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="160" cy="320" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="200" cy="340" r="4" fill="#06b6d4" class="node-pulse"/>
+              <circle cx="240" cy="320" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="80" cy="160" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="60" cy="200" r="4" fill="#06b6d4" class="node-pulse"/>
+              <circle cx="80" cy="240" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="320" cy="160" r="4" fill="#6366f1" class="node-pulse"/>
+              <circle cx="340" cy="200" r="4" fill="#06b6d4" class="node-pulse"/>
+              <circle cx="320" cy="240" r="4" fill="#6366f1" class="node-pulse"/>
+              <!-- Pulsing energy ring -->
+              <circle cx="200" cy="200" r="90" fill="none" stroke="url(#grad1)" stroke-width="0.5" opacity="0.3" class="energy-ring"/>
+              <circle cx="200" cy="200" r="130" fill="none" stroke="url(#grad1)" stroke-width="0.5" opacity="0.2" class="energy-ring-2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2 class="section-label">About</h2>
+          <h3 class="section-title">Where Innovation Meets <br/>Relentless Passion</h3>
+          <p>
+            I lead power architecture strategy for mobile computing devices — bridging silicon design 
+            with real-world user experience. Every milliwatt saved, every thermal constraint solved, 
+            translates to millions of people enjoying longer battery life and smoother performance.
+          </p>
+          <p>
+            My approach is simple: pour everything into the work. I believe the best innovations 
+            come from an obsessive commitment to excellence and a refusal to settle for "good enough."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Section -->
+  <section class="section expertise" id="expertise">
+    <div class="container">
+      <h2 class="section-label">Expertise</h2>
+      <h3 class="section-title">Core Domains</h3>
+      <div class="card-grid">
+        <div class="card" data-tilt>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4L6 14v20l18 10 18-10V14L24 4z" stroke="url(#grad1)" stroke-width="2" fill="none"/>
+              <path d="M24 4v40M6 14l18 10 18-10" stroke="url(#grad1)" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <circle cx="24" cy="24" r="6" fill="url(#grad1)" opacity="0.2"/>
+              <circle cx="24" cy="24" r="3" fill="url(#grad1)" opacity="0.6"/>
+            </svg>
+          </div>
+          <h4>Power Architecture</h4>
+          <p>End-to-end power delivery and management architecture for next-generation mobile SoCs.</p>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="12" width="32" height="24" rx="4" stroke="url(#grad1)" stroke-width="2"/>
+              <path d="M16 20h16M16 26h10" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="38" cy="8" r="4" fill="#6366f1" opacity="0.6"/>
+              <path d="M34 8h-8M24 8V4" stroke="url(#grad1)" stroke-width="1" opacity="0.4"/>
+            </svg>
+          </div>
+          <h4>System Performance</h4>
+          <p>Holistic performance optimization across CPU, GPU, NPU, and memory subsystems.</p>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 38L14 20l8 12 6-18 6 10 6-12" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="14" cy="20" r="3" fill="#6366f1" opacity="0.4"/>
+              <circle cx="22" cy="32" r="3" fill="#06b6d4" opacity="0.4"/>
+              <circle cx="28" cy="14" r="3" fill="#6366f1" opacity="0.4"/>
+              <circle cx="34" cy="24" r="3" fill="#06b6d4" opacity="0.4"/>
+              <circle cx="40" cy="12" r="3" fill="#6366f1" opacity="0.4"/>
+            </svg>
+          </div>
+          <h4>Thermal &amp; Efficiency</h4>
+          <p>Innovative thermal solutions and efficiency algorithms that push device limits.</p>
+        </div>
+        <div class="card" data-tilt>
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="18" stroke="url(#grad1)" stroke-width="2" fill="none"/>
+              <circle cx="24" cy="24" r="10" stroke="url(#grad1)" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <circle cx="24" cy="24" r="3" fill="url(#grad1)"/>
+              <path d="M24 6v4M24 38v4M6 24h4M38 24h4" stroke="url(#grad1)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>User Experience Focus</h4>
+          <p>Every technical decision measured by its impact on real-world user experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="section philosophy" id="philosophy">
+    <div class="container">
+      <div class="philosophy-inner">
+        <h2 class="section-label">Philosophy</h2>
+        <blockquote class="big-quote">
+          <span class="quote-mark">"</span>
+          Innovation isn't just an idea — it's the relentless pursuit of making it real. 
+          I pour my soul into every system I architect, because billions of users 
+          deserve nothing less than the absolute best.
+          <span class="quote-mark">"</span>
+        </blockquote>
+        <div class="values-row">
+          <div class="value-item">
+            <div class="value-number">01</div>
+            <h4>Obsessive Craft</h4>
+            <p>Every detail matters. Every milliwatt counts.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-number">02</div>
+            <h4>Bold Innovation</h4>
+            <p>Challenge conventions, create new possibilities.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-number">03</div>
+            <h4>User-First</h4>
+            <p>Technology serves people, not the other way around.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="section impact" id="impact">
+    <div class="container">
+      <h2 class="section-label">Impact</h2>
+      <h3 class="section-title">By the Numbers</h3>
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-suffix">+</div>
+          <p>Years of power architecture leadership</p>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-suffix">+</div>
+          <p>Products shipped to market</p>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="40">0</div>
+          <div class="stat-suffix">+</div>
+          <p>Impactful US &amp; World patents</p>
+        </div>
+        <div class="stat">
+          <div class="stat-text-only">Innovation<br/>Everyday</div>
+          <p>Relentless pursuit of what's next</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <h2 class="section-label">Connect</h2>
+        <h3 class="section-title">Let's Build the Future</h3>
+        <p class="contact-sub">
+          Open to collaborations, speaking engagements, and bold ideas.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com" class="contact-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Email
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 — Crafted with passion &amp; precision.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
